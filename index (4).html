@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cut N Cute Men Salon | Panathur, Bengaluru</title>
+<meta name="description" content="Cut N Cute Men Salon — premium men's grooming in Panathur, Bengaluru. Haircuts, beard styling, shaves, hair colour, and spa treatments.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Cut N Cute Men Salon",
+  "image": "",
+  "telephone": "+91-8048536533",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sri Complex, Shop No 2 & 3, Bhoganahalli Main Road, 150 Feet Road, Panathur",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560103",
+    "addressCountry": "IN"
+  },
+  "url": "https://cutncute.in",
+  "priceRange": "₹₹",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9310008,
+    "longitude": 77.6975567
+  },
+  "hasMap": "https://maps.app.goo.gl/fx84TFEESsqtLM6y9",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "515"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:30",
+    "closes": "22:00"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0b0a09;
+    --bg-2:#141210;
+    --card:#17140f;
+    --line:#2a2620;
+    --white:#ffffff;
+    --gray:#adaaa5;
+    --gold:#e0a72e;
+    --gold-dim:#8a691e;
+    --radius:8px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:'Inter', sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    color:var(--white);
+    line-height:1.12;
+  }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px; max-width:1180px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Poppins', sans-serif; font-weight:800; font-size:22px;
+  }
+  .logo span{ color:var(--gold); }
+  .nav-links{ display:flex; gap:32px; align-items:center; }
+  .nav-links a.link{
+    font-size:15px; font-weight:500; color:var(--gray);
+    transition:color 0.2s;
+  }
+  .nav-links a.link.active{ color:var(--gold); font-weight:600; }
+  .nav-links a.link:hover{ color:var(--gold); }
+  .nav-ctas{ display:flex; gap:12px; }
+  .pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 20px; border-radius:999px;
+    font-weight:600; font-size:14px; white-space:nowrap;
+    transition:all 0.2s; cursor:pointer;
+  }
+  .pill-outline{
+    border:1.5px solid var(--gold); color:var(--gold); background:transparent;
+  }
+  .pill-outline:hover{ background:rgba(224,167,46,0.1); }
+  .pill-solid{
+    border:1.5px solid var(--gold); background:var(--gold); color:#1a1408;
+  }
+  .pill-solid:hover{ background:#f0b83f; }
+  .mobile-toggle{ display:none; }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    min-height:600px;
+    display:flex; align-items:center;
+    padding:64px 24px;
+    background:
+      linear-gradient(90deg, rgba(11,10,9,0.97) 20%, rgba(11,10,9,0.55) 65%, rgba(11,10,9,0.25) 100%),
+      var(--hero-photo, linear-gradient(135deg, #1c1710, #0b0a09 60%));
+    background-size:cover;
+    background-position:center;
+    border-bottom:1px solid var(--line);
+  }
+  /* To use a real shop photo: set --hero-photo on .hero inline style to url('your-photo.jpg') */
+  .hero-inner{ max-width:640px; margin:0; }
+  .hero h1{
+    font-size:clamp(34px, 5.2vw, 56px);
+    margin-bottom:22px;
+  }
+  .hero h1 em{ color:var(--gold); font-style:normal; }
+  .hero p{
+    color:var(--gray); font-size:17px; max-width:520px; margin-bottom:32px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .hero-ctas .pill{ padding:14px 26px; font-size:15px; }
+
+  /* Sections */
+  section{ padding:80px 24px; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 48px; }
+  .section-head .eyebrow{
+    color:var(--gold); font-weight:600; font-size:13px; text-transform:uppercase;
+    letter-spacing:0.1em; margin-bottom:12px;
+  }
+  .section-head h2{ font-size:clamp(28px, 4vw, 38px); margin-bottom:12px; }
+  .section-head p{ color:var(--gray); font-size:15.5px; }
+
+  /* Services grid */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:22px;
+  }
+  .service-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; transition:border-color 0.2s, transform 0.2s;
+  }
+  .service-card:hover{ border-color:var(--gold-dim); transform:translateY(-3px); }
+  .service-card .icon{
+    width:48px; height:48px; border-radius:50%;
+    background:rgba(224,167,46,0.12); color:var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; margin-bottom:18px;
+  }
+  .service-card h3{ font-size:19px; margin-bottom:8px; }
+  .service-card p.desc{ color:var(--gray); font-size:14px; margin-bottom:20px; }
+  .service-card .meta{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line); padding-top:16px;
+  }
+  .service-card .price{ color:var(--gold); font-weight:700; font-size:18px; }
+  .service-card .duration{ color:var(--gray); font-size:13px; }
+
+  /* Why us */
+  .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .why-item{
+    text-align:center; padding:32px 20px;
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  }
+  .why-item .icon{
+    width:52px; height:52px; border-radius:50%;
+    background:rgba(224,167,46,0.12); color:var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; margin:0 auto 16px;
+  }
+  .why-item h3{ font-size:17px; margin-bottom:10px; }
+  .why-item p{ color:var(--gray); font-size:14px; }
+
+  /* Visit / Book */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+  .info-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:28px;
+  }
+  .info-line{ display:flex; gap:14px; padding:16px 0; border-top:1px solid var(--line); }
+  .info-line:first-child{ border-top:none; padding-top:0; }
+  .info-line .k{ color:var(--gold); font-weight:600; font-size:13px; min-width:90px; }
+  .info-line .v{ font-size:14.5px; color:var(--white); }
+  .info-line .v .dim{ color:var(--gray); display:block; font-size:13px; margin-top:2px; }
+
+  form{ display:flex; flex-direction:column; gap:14px; }
+  .field label{ display:block; font-size:13px; font-weight:600; color:var(--gray); margin-bottom:6px; }
+  .field input, .field select, .field textarea{
+    width:100%; background:var(--bg-2); border:1px solid var(--line);
+    border-radius:6px; padding:12px 14px; color:var(--white); font-family:'Inter';
+    font-size:14px;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--gold); }
+  .field textarea{ resize:vertical; min-height:80px; }
+  #formStatus{ font-size:13px; margin-top:4px; color:var(--gray); }
+
+  footer{ border-top:1px solid var(--line); padding:40px 24px; text-align:center; }
+  footer p{ color:var(--gray); font-size:13px; }
+  footer .logo{ display:inline-block; margin-bottom:12px; }
+
+  .whatsapp-fab{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    width:56px; height:56px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+  }
+  .whatsapp-fab svg{ width:28px; height:28px; }
+
+  @media (max-width: 900px){
+    .hero-inner{ max-width:100%; }
+    .why-grid{ grid-template-columns:1fr; }
+    .split{ grid-template-columns:1fr; }
+    .nav-links{
+      position:fixed; top:64px; left:0; right:0; bottom:0;
+      background:var(--bg); flex-direction:column; justify-content:flex-start;
+      padding:32px 24px; gap:22px; transform:translateX(100%);
+      transition:transform 0.25s ease; border-top:1px solid var(--line);
+    }
+    .nav-links.open{ transform:translateX(0); }
+    .nav-links .link{ font-size:17px; }
+    .nav-ctas{ flex-direction:column; width:100%; }
+    .mobile-toggle{
+      display:block; background:none; border:none; color:var(--white);
+      font-size:24px; cursor:pointer;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; } *{ transition:none !important; }
+  }
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">Cut n <span>Cute</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#top" class="link active">Home</a>
+      <a href="#services" class="link">Services</a>
+      <a href="#why" class="link">Why Us</a>
+      <a href="#visit" class="link">Visit</a>
+      <a href="#book" class="link">Contact</a>
+      <div class="nav-ctas">
+        <a href="tel:+918048536533" class="pill pill-outline">📞 Call Now</a>
+        <a href="https://wa.me/918217009543" target="_blank" rel="noopener" class="pill pill-solid">💬 WhatsApp</a>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="heroSection" style="padding-top:64px;">
+    <div class="hero-inner wrap" style="padding:0;">
+      <h1>Expert Grooming &amp; Style <br>for <em>Modern Men</em></h1>
+      <p>Premium men's salon in Panathur, Bengaluru — professional haircuts, beard styling, shaves, colour, and spa treatments.</p>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:26px;">
+        <span style="color:var(--gold); font-size:16px; letter-spacing:2px;">★★★★★</span>
+        <span style="color:var(--gray); font-size:14px;">4.9 rating from 515 Google reviews</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#book" class="pill pill-solid">💬 Book Appointment</a>
+        <a href="tel:+918048536533" class="pill pill-outline">📞 Call Now</a>
+      </div>
+    </div>
+  </section>
+  <!-- To add your shop photo: replace the style attribute above with
+       style="--hero-photo:url('your-photo.jpg'); padding-top:64px;" -->
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">The Menu</div>
+        <h2>Services &amp; Pricing</h2>
+        <p>Every service, priced upfront. No surprises at the chair.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">✂️</div>
+          <h3>Haircut</h3>
+          <p class="desc">Classic, fade, crop, or textured — cut to your face shape with a styling consult.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">30–40 min</span></div>
+        </div>
+        <div class="service-card">
+          <div class="icon">🪒</div>
+          <h3>Beard Styling</h3>
+          <p class="desc">Shape-up, trim, and line-up with razor detailing for a clean, defined edge.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">20 min</span></div>
+        </div>
+        <div class="service-card">
+          <div class="icon">🧖</div>
+          <h3>Hot Towel Shave</h3>
+          <p class="desc">Traditional straight-razor shave with hot towel prep and cooling aftercare.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">30 min</span></div>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎨</div>
+          <h3>Hair Colour</h3>
+          <p class="desc">Grey coverage or full colour, ammonia-free options available on request.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">45–60 min</span></div>
+        </div>
+        <div class="service-card">
+          <div class="icon">💆</div>
+          <h3>Head Massage &amp; Spa</h3>
+          <p class="desc">Stress-relief scalp massage with hot oil treatment, finished with a wash.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">40 min</span></div>
+        </div>
+        <div class="service-card">
+          <div class="icon">⭐</div>
+          <h3>The Full Works</h3>
+          <p class="desc">Haircut, beard shape-up, and hot towel shave — the complete grooming session.</p>
+          <div class="meta"><span class="price">₹XXX</span><span class="duration">75 min</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Why Cut N Cute</div>
+        <h2>Grooming, done properly</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="icon">👨‍🦱</div>
+          <h3>Skilled Barbers</h3>
+          <p>Trained stylists who specialise in men's cuts, fades, and beard work.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">⏱️</div>
+          <h3>On-Time Appointments</h3>
+          <p>Book a slot and get seen on time — no open-ended waits.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">🏷️</div>
+          <h3>Upfront Pricing</h3>
+          <p>Every service is priced and posted. What you see is what you pay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Google Reviews</div>
+        <h2>What clients are saying</h2>
+        <p style="display:flex; align-items:center; justify-content:center; gap:8px;">
+          <span style="color:var(--gold);">★★★★★</span> 4.9 out of 5 · 515 Google reviews
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">⭐</div>
+          <p class="desc" style="font-size:15px; color:var(--white); margin-bottom:16px;">A parent shared how the salon's kid-friendly setup — including a proper children's chair, not just a novelty seat — helped their child sit calmly through a haircut after a bad experience elsewhere, with fair pricing on top.</p>
+          <div class="meta" style="border-top:1px solid var(--line); padding-top:14px;">
+            <span class="duration">Google review</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="icon">⭐</div>
+          <p class="desc" style="font-size:15px; color:var(--white); margin-bottom:16px;">A first-time visitor called out the modern, clean interiors and skilled barbers, describing it as a relaxing, detail-oriented experience they'd happily return to.</p>
+          <div class="meta" style="border-top:1px solid var(--line); padding-top:14px;">
+            <span class="duration">Google review</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="icon">⭐</div>
+          <p class="desc" style="font-size:15px; color:var(--white); margin-bottom:16px;">A regular of over a year credited the salon's professionalism, hygiene, fair pricing, and warm, experienced staff for keeping them coming back.</p>
+          <div class="meta" style="border-top:1px solid var(--line); padding-top:14px;">
+            <span class="duration">Google review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT + BOOK -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="section-head" style="text-align:left; margin-bottom:24px;">
+            <div class="eyebrow">Find Us</div>
+            <h2>Visit the Shop</h2>
+          </div>
+          <div class="info-card">
+            <div class="info-line">
+              <span class="k">Address</span>
+              <span class="v">Sri Complex, Shop No 2 &amp; 3, Bhoganahalli Main Road, 150 Feet Road, Panathur <span class="dim">Bengaluru, Karnataka 560103</span></span>
+            </div>
+            <div class="info-line">
+              <span class="k">Hours</span>
+              <span class="v">7:30 AM – 10:00 PM <span class="dim">Open all days</span></span>
+            </div>
+            <div class="info-line">
+              <span class="k">Phone</span>
+              <span class="v"><a href="tel:+918048536533">080 4853 6533</a></span>
+            </div>
+            <div class="info-line">
+              <span class="k">WhatsApp</span>
+              <span class="v"><a href="https://wa.me/918217009543" target="_blank" rel="noopener">Message us directly</a></span>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://maps.app.goo.gl/fx84TFEESsqtLM6y9" target="_blank" rel="noopener" class="pill pill-solid">📍 Get Directions</a>
+          </div>
+
+          <div style="margin-top:20px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;">
+            <iframe
+              title="Cut N Cute Men Salon location map"
+              src="https://www.google.com/maps?q=12.9310008,77.6975567&z=16&output=embed"
+              width="100%" height="240" style="border:0; filter:grayscale(0.4) invert(0.9) contrast(0.9);"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <div id="book">
+          <div class="section-head" style="text-align:left; margin-bottom:24px;">
+            <div class="eyebrow">Reserve a Chair</div>
+            <h2>Book an Appointment</h2>
+          </div>
+          <form id="bookingForm">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Haircut</option>
+                <option>Beard Styling</option>
+                <option>Hot Towel Shave</option>
+                <option>Hair Colour</option>
+                <option>Head Massage & Spa</option>
+                <option>The Full Works</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="datetime">Preferred Date &amp; Time</label>
+              <input type="text" id="datetime" name="datetime" placeholder="e.g. 18 Jul, 5:00 PM" required>
+            </div>
+            <div class="field">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" placeholder="Anything we should know?"></textarea>
+            </div>
+            <button type="submit" class="pill pill-solid" style="border:none; cursor:pointer;">Submit Booking</button>
+            <div id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="logo">Cut n <span style="color:var(--gold);">Cute</span></div>
+  <p>Cut N Cute Men Salon · Panathur, Bengaluru · cutncute.in</p>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/918217009543" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58zM12.06 18.4h-.01a6.58 6.58 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 5.6 3.09zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.23.15-.42.05-.2-.1-.83-.3-1.58-.97a5.9 5.9 0 0 1-1.1-1.36c-.11-.2 0-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.19.2-.32.06-.13.03-.24-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.19-.68.66-.68 1.6 0 .95.7 1.87.8 2 .1.13 1.37 2.1 3.33 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
+
+<script>
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const form = document.getElementById('bookingForm');
+  const status = document.getElementById('formStatus');
+  const SCRIPT_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Submitting...';
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      if (SCRIPT_URL.startsWith('PASTE_')) {
+        status.textContent = 'Booking form ready — connect the Google Sheet script to go live.';
+        return;
+      }
+      await fetch(SCRIPT_URL, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      status.textContent = 'Thanks! We\'ll confirm your slot on WhatsApp shortly.';
+      form.reset();
+    } catch (err) {
+      status.textContent = 'Something went wrong. Please WhatsApp us directly to book.';
+    }
+  });
+</script>
+
+</body>
+</html>
