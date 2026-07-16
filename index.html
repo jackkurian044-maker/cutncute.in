@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,7 +152,7 @@
   .section-head h2{ font-size:clamp(28px, 4vw, 38px); margin-bottom:12px; }
   .section-head p{ color:var(--gray); font-size:15.5px; }
 
-  /* Services grid */
+  /* Services grid (used for testimonials) */
   .services-grid{
     display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:22px;
   }
@@ -174,6 +175,40 @@
   }
   .service-card .price{ color:var(--gold); font-weight:700; font-size:18px; }
   .service-card .duration{ color:var(--gray); font-size:13px; }
+
+  /* Package pricing cards */
+  .package-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:22px;
+    align-items:start;
+  }
+  .package-card{
+    position:relative;
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:32px 28px 28px; display:flex; flex-direction:column;
+    transition:border-color 0.2s, transform 0.2s;
+  }
+  .package-card:hover{ border-color:var(--gold-dim); transform:translateY(-3px); }
+  .package-card.featured{ border-color:var(--gold); }
+  .package-badge{
+    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+    background:var(--gold); color:#1a1408; font-size:12px; font-weight:700;
+    padding:5px 16px; border-radius:999px; white-space:nowrap;
+  }
+  .package-card h3{ font-size:19px; margin-bottom:6px; }
+  .package-card .package-desc{ color:var(--gray); font-size:13px; margin-bottom:18px; }
+  .package-price{
+    font-family:'Poppins', sans-serif; color:var(--gold); font-weight:800;
+    font-size:32px; margin-bottom:20px;
+  }
+  .package-includes-label{ font-size:13px; font-weight:600; color:var(--white); margin-bottom:10px; }
+  .package-includes{ list-style:none; margin-bottom:24px; flex-grow:1; }
+  .package-includes li{
+    display:flex; align-items:center; gap:8px; font-size:14px; color:var(--white);
+    padding:5px 0;
+  }
+  .package-includes li::before{ content:"✓"; color:var(--gold); font-weight:700; }
+  .package-actions{ display:flex; flex-direction:column; gap:10px; }
+  .package-actions .pill{ justify-content:center; width:100%; }
 
   /* Why us */
   .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
@@ -324,51 +359,120 @@
   <!-- To add your shop photo: replace the style attribute above with
        style="--hero-photo:url('your-photo.jpg'); padding-top:64px;" -->
 
-  <!-- SERVICES -->
+  <!-- SERVICES / PACKAGES -->
   <section id="services">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">The Menu</div>
         <h2>Services &amp; Pricing</h2>
-        <p>Every service, priced upfront. No surprises at the chair.</p>
+        <p>Every package, priced upfront. No surprises at the chair.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="icon">✂️</div>
-          <h3>Haircut</h3>
-          <p class="desc">Classic, fade, crop, or textured — cut to your face shape with a styling consult.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">30–40 min</span></div>
+      <div class="package-grid">
+        <div class="package-card">
+          <h3>Essential Grooming</h3>
+          <p class="package-desc">Perfect for a quick refresh and clean look</p>
+          <div class="package-price">₹199</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Essential%20Grooming%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="icon">🪒</div>
-          <h3>Beard Styling</h3>
-          <p class="desc">Shape-up, trim, and line-up with razor detailing for a clean, defined edge.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">20 min</span></div>
+
+        <div class="package-card">
+          <h3>Fresh Look</h3>
+          <p class="package-desc">Complete grooming with skin care treatment</p>
+          <div class="package-price">₹399</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+            <li>Clean Up / Bleach / Detan</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Fresh%20Look%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="icon">🧖</div>
-          <h3>Hot Towel Shave</h3>
-          <p class="desc">Traditional straight-razor shave with hot towel prep and cooling aftercare.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">30 min</span></div>
+
+        <div class="package-card featured">
+          <div class="package-badge">Most Popular</div>
+          <h3>Premium Care</h3>
+          <p class="package-desc">Premium package with rejuvenating facial treatment</p>
+          <div class="package-price">₹699</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+            <li>Type 1 Facials</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Premium%20Care%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="icon">🎨</div>
-          <h3>Hair Colour</h3>
-          <p class="desc">Grey coverage or full colour, ammonia-free options available on request.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">45–60 min</span></div>
+
+        <div class="package-card">
+          <h3>Luxury Grooming</h3>
+          <p class="package-desc">Luxury treatment with advanced facial and hair color</p>
+          <div class="package-price">₹899</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+            <li>Type 2 Facials</li>
+            <li>Hair Colour</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Luxury%20Grooming%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="icon">💆</div>
-          <h3>Head Massage &amp; Spa</h3>
-          <p class="desc">Stress-relief scalp massage with hot oil treatment, finished with a wash.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">40 min</span></div>
+
+        <div class="package-card">
+          <h3>Style Master</h3>
+          <p class="package-desc">Stand out with premium facial and stylish color streaks</p>
+          <div class="package-price">₹1099</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+            <li>Type 3 Facials</li>
+            <li>Hair Colour Streaks</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Style%20Master%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="icon">⭐</div>
-          <h3>The Full Works</h3>
-          <p class="desc">Haircut, beard shape-up, and hot towel shave — the complete grooming session.</p>
-          <div class="meta"><span class="price">₹XXX</span><span class="duration">75 min</span></div>
+
+        <div class="package-card featured">
+          <div class="package-badge">Premium Choice</div>
+          <h3>Ultimate Experience</h3>
+          <p class="package-desc">Our most premium package with L'Oreal products</p>
+          <div class="package-price">₹1399</div>
+          <div class="package-includes-label">Includes:</div>
+          <ul class="package-includes">
+            <li>Hair Cut</li>
+            <li>Shaving</li>
+            <li>Head Massage</li>
+            <li>Type 5 Premium Facials</li>
+            <li>Hair Colour (L'Oreal)</li>
+          </ul>
+          <div class="package-actions">
+            <a href="https://wa.me/918217009543?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Ultimate%20Experience%20package" target="_blank" rel="noopener" class="pill pill-solid">💬 Book via WhatsApp</a>
+            <a href="tel:+918048536533" class="pill pill-outline">📞 Call to Book</a>
+          </div>
         </div>
       </div>
     </div>
@@ -395,7 +499,7 @@
         <div class="why-item">
           <div class="icon">🏷️</div>
           <h3>Upfront Pricing</h3>
-          <p>Every service is priced and posted. What you see is what you pay.</p>
+          <p>Every package is priced and posted. What you see is what you pay.</p>
         </div>
       </div>
     </div>
@@ -494,15 +598,15 @@
               <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="field">
-              <label for="service">Service</label>
+              <label for="service">Package</label>
               <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option>Haircut</option>
-                <option>Beard Styling</option>
-                <option>Hot Towel Shave</option>
-                <option>Hair Colour</option>
-                <option>Head Massage & Spa</option>
-                <option>The Full Works</option>
+                <option value="">Select a package</option>
+                <option>Essential Grooming</option>
+                <option>Fresh Look</option>
+                <option>Premium Care</option>
+                <option>Luxury Grooming</option>
+                <option>Style Master</option>
+                <option>Ultimate Experience</option>
               </select>
             </div>
             <div class="field">
